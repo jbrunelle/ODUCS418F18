@@ -2,7 +2,7 @@
 
 Fall 2018 ODU CS 418/518
 ========
-This GitHub repository will be the basis for submitting assignments for the Fall 2017 CS418/518 course - 
+This GitHub repository will be the basis for submitting assignments for the Fall 2018 CS418/518 course - 
 Web Programming at Old Dominion University
 
 Instructor: Dr. Justin F. Brunelle [mail](mailto:jfbrunel@odu.edu)
