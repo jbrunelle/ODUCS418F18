@@ -52,6 +52,57 @@ INSERT INTO `oduScores` VALUES (2,'UMASS',7,17,'2017-09-09 12:00:00');
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
+
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `cars` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+USE `cars`;
+
+
+CREATE TABLE IF NOT EXISTS `makes` (
+  `make_id` int(11) NOT NULL,
+  `make_name` varchar(65) NOT NULL,
+  `hq` text NOT NULL,
+  `make_notes` text NOT NULL,
+  PRIMARY KEY (`make_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `makes`
+--
+
+INSERT INTO `makes` (`make_id`, `make_name`, `hq`, `make_notes`) VALUES
+(1, 'Ford', 'Dearborn, Michigan, USA', 'Best make'),
+(2, 'Chevrolet', 'Detroit, Michigan, USA', 'A good second best');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `models`
+--
+
+CREATE TABLE IF NOT EXISTS `models` (
+  `model_id` int(11) NOT NULL,
+  `make_id` int(11) NOT NULL,
+  `make_name` varchar(65) NOT NULL,
+  `horsepower` int(11) NOT NULL,
+  `num_doors` int(11) NOT NULL,
+  `make_notes` text NOT NULL,
+  PRIMARY KEY (`model_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `models`
+--
+
+INSERT INTO `models` (`model_id`, `make_id`, `make_name`, `horsepower`, `num_doors`, `make_notes`) VALUES
+(1, 1, 'mustang gt', 435, 2, 'crazy awesome car'),
+(2, 1, 'ford focus', 123, 4, 'cheaper car'),
+(3, 2, 'camaro ss', 650, 2, 'looks good on paper...'),
+(4, 2, 'impala', 197, 4, 'really not worth buying...');
+
+
+
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
