@@ -5,7 +5,7 @@ print "Out files array:<br>";
 print_r($_FILES);
 print "<br><br>";
 
-  $uploaddir = '/home/jbrunelle/public_html/cs518/examples/uploads/';
+  $uploaddir = './';
   $uploadfile = $uploaddir . basename($_FILES['mkfile']['name']);
   $uploadfile = str_replace(".php",".txt",$uploadfile); //prevent .php files from being uploaded
 
